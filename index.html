@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Ventas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="d-flex toggled" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-light" id="sidebar-wrapper">
+            <div class="sidebar-heading">Dashboard</div>
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action bg-light">Resumen General</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Casa Matriz</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Venta Nuble</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Reporte Anual</a>
+            </div>
+        </div>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-light bg-light border-bottom">
+                <button class="btn btn-primary" id="menu-toggle">Mostrar/Ocultar Menú</button>
+            </nav>
+
+            <div class="container-fluid">
+                <!-- Sección de Ventas Generales -->
+                <div class="card card-section mt-4">
+                    <div class="card-body">
+                        <h3 class="card-title">Venta General</h3>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>Venta Total del Día &#128178;</h5>
+                                <p id="general-dia">$0</p>
+                            </div>
+                            <div class="col-md-3">
+                                <h5>Venta Total (Mes Actual) &#128176;</h5>
+                                <p id="general-mes-actual">$0</p>
+                            </div>
+                            <div class="col-md-3">
+                                <h5>Venta Total (Mes Anterior) &#128181;</h5>
+                                <p id="general-mes-anterior">$0</p>
+                            </div>
+                            <div class="col-md-3">
+                                <h5>Venta Total (Año Actual) &#128176;</h5>
+                                <p id="general-anual">$0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección de Ventas Casa Matriz -->
+                <div class="card card-section mt-4">
+                    <div class="card-body">
+                        <h3 class="card-title">Casa Matriz</h3>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>Venta Total del Día &#128178;</h5>
+                                <p id="matriz-dia">$0</p>
+                            </div>
+                            <div class="col-md-3">
+                                <h5>Venta Total (Mes Actual) &#128181;</h5>
+                                <p id="matriz-mes-actual">$0</p>
+                            </div>
+                            <div class="col-md-3">
+                                <h5>Venta Total (Mes Anterior) &#128181;</h5>
+                                <p id="matriz-mes-anterior">$0</p>
+                            </div>
+                            <div class="col-md-3">
+                                <h5>Venta Total (Año Actual) &#128176;</h5>
+                                <p id="matriz-anual">$0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección de Ventas Nuble -->
+                <div class="card card-section mt-4">
+                    <div class="card-body">
+                        <h3 class="card-title">Venta Nuble</h3>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>Venta Total del Día &#128178;</h5>
+                                <p id="nuble-dia">$0</p>
+                            </div>
+                            <div class="col-md-3">
+                                <h5>Venta Total (Mes Actual)</h5>
+                                <p id="nuble-mes-actual">$0</p>
+                            </div>
+                            <div class="col-md-3">
+                                <h5>Venta Total (Mes Anterior) &#128181;</h5>
+                                <p id="nuble-mes-anterior">$0</p>
+                            </div>
+                            <div class="col-md-3">
+                                <h5>Venta Total (Año Actual) &#128176;</h5>
+                                <p id="nuble-anual">$0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-section">
+                    <div class="card-body">
+                        <h3 class="card-title">Venta Total Últimos 12 Meses</h3>
+                        <canvas id="ventasChart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="sidebar.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
